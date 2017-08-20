@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-faded">
+    <div class="row justify-content-between">
+        <app-navigation></app-navigation>
+        <div class="col col-4">
+        <a class="navbar-brand" href="/">{{applicationTitle}}</a>
+        </div>
+        <div class="col col-4" ng-click="clickToOpen()">
+            Total: <span>{{numberOfIssues}}</span>
+            Client: <span>{{numberOfClientIssues}}</span>
+            Server: <span>{{numberOfServerIssues}}</span>
+            Notices: <span>{{numberOfNotices}}</span>
+            Warnings: <span>{{numberOfWarnings}}</span>
+            Errors: <span>{{numberOfErrors}}</span>
+        </div>
+    </div>
+</nav>

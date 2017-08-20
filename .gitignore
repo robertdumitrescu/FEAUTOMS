@@ -1,0 +1,27 @@
+############### JetBrains IDE folder
+
+.idea
+.idea/
+.idea/*
+
+############### Node Modules
+
+node_modules
+node_modules/
+node_modules/*
+
+############### Bower Components
+
+bower_components
+bower_components/
+bower_components/*
+
+############### NPM Debug Log
+
+npm-debug.log
+
+############### Computed folder
+
+public
+public/
+public/*

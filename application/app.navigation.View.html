@@ -1,0 +1,146 @@
+<style>
+
+    .at-nav-buttons {
+
+        padding: 5px;
+    }
+
+    .at-nav-buttons a {
+        width: 40px;
+        border: 1px solid #000000;
+        padding: 5px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 3px;
+        color: #000000;
+    }
+
+    .at-nav-cards {
+        margin-top: 80px;
+        margin-left: 15px;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 250px;
+    }
+
+    .at-nav-overlay{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        margin-top: 60px;
+        height: 100%;
+        opacity: 0.5;
+        background-color: #000;
+    }
+
+    .at-nav-card.at-nav-card{
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #24262C;
+        background-color: #2A2D35;
+        margin-bottom: 15px;
+    }
+
+    .at-nav-card.at-nav-card h5{
+        color: #EEE;
+        padding-bottom: 10px;
+    }
+
+    .at-nav-card.at-nav-card a{
+        display: block;
+        color: #CCC;
+    }
+    .at-nav-card.at-nav-card a:hover{
+        display: block;
+        color: #EEE;
+    }
+
+</style>
+
+<div class="at-nav-buttons">
+    <a href="javascript:void(0)"  ng-click="toggleContentNavCard()"
+       aria-label="Content" class="hint--bottom">
+        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+    </a>
+
+    <a href="javascript:void(0)" ng-click="toggleTaxonomyNavCard()"
+       aria-label="Taxonomy" class="hint--bottom">
+        <i class="fa fa-sitemap" aria-hidden="true"></i>
+    </a>
+    <a href="javascript:void(0)" ng-click="toggleFormulaNavCard()"
+       aria-label="Formula" class="hint--bottom">
+        <i class="fa fa-superscript" aria-hidden="true"></i>
+    </a>
+    <a href="javascript:void(0)" ng-click="toggleNameNavCard()"
+       aria-label="Name" class="hint--bottom">
+        <i class="fa fa-id-card" aria-hidden="true"></i>
+    </a>
+    <a href="javascript:void(0)" ng-click="toggleDatabaseNavCard()"
+       aria-label="Database" class="hint--bottom">
+        <i class="fa fa-database" aria-hidden="true"></i>
+    </a>
+    <a href="javascript:void(0)" ng-click="toggleAllNavCards()"
+       aria-label="Toggle all menus" class="hint--bottom">
+        <i class="fa fa-toggle-off" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="at-nav-cards">
+    <div class="at-nav-card" ng-show="ContentNavCard">
+        <h5>Content</h5>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/content/listing')">
+            Listing
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/content/builder')">
+            Builder
+        </a>
+    </div>
+    <div class="at-nav-card" ng-show="TaxonomyNavCard">
+        <h5>Taxonomy</h5>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/taxonomy/taxonomy/builder')">
+            Taxonomy builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/taxonomy/scope/builder')">
+            Scope builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/taxonomy/term/builder')">
+            Term builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/taxonomy/termLink/builder')">
+            Term link builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/taxonomy/term/treeView')">
+            Terms tree view
+        </a>
+    </div>
+    <div class="at-nav-card" ng-show="FormulaNavCard">
+        <h5>Formula</h5>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/formula/builder')">
+            Builder
+        </a>
+    </div>
+    <div class="at-nav-card" ng-show="NameNavCard">
+        <h5>Name</h5>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/name/name/builder')">
+            Name builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/name/pronunciation/builder')">
+            Pronunciation builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/name/script/builder')">
+            Script builder
+        </a>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/name/usage/builder')">
+            Usage builder
+        </a>
+    </div>
+    <div class="at-nav-card" ng-show="DatabaseNavCard">
+        <h5>Database</h5>
+        <a href="javascript:void(0)" ng-click="$root.goToUrl('/db/configs/listing')">
+            Configs
+        </a>
+    </div>
+</div>

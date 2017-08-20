@@ -1,0 +1,9 @@
+<div ng-repeat="issue in issues">
+    <span ng-if="issue.source == 'Server'" class="badge badge-primary">Server</span>
+    <span ng-if="issue.source == 'Client'" class="badge badge-primary">Client</span>
+    <span ng-if="issue.severity == 'Notice'" class="badge badge-info">Notice</span>
+    <span ng-if="issue.severity == 'Warning'" class="badge badge-warning">Warning</span>
+    <span ng-if="issue.severity == 'Error'" class="badge badge-danger">Error</span>
+    <span ng-if="issue.type == 'Validation'" class="badge badge-primary">Validation</span>
+    {{issue.issueData}}
+</div>
