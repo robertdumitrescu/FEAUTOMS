@@ -30,7 +30,7 @@
     "font-awesome": "^4.7.0",
     "localpkg-generic-helper": "git@github.com:robertdumitrescu/localPKG-generic-helper.git",
     "localpkg-generic-validator": "git@github.com:robertdumitrescu/localpkg-generic-validator.git",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.19",
     "morgan": "^1.7.0",
     "q": "^1.4.1"
   },
